@@ -1,0 +1,222 @@
+const communities = [
+    {
+        id: '1',
+        name: 'Tech Enthusiasts',
+        description: 'A place for tech lovers to discuss the latest trends.',
+        createdAt: '2023-01-10T12:00:00Z',
+        banner_image_url: 'https://loremflickr.com/800/300/technology',
+        memberCount: 120,
+        type: 'public',
+        resources: [
+            {
+                name: 'Tech News',
+                url: 'https://technews.com',
+            },
+            {
+                name: 'Gadget Reviews',
+                url: 'https://gadgetreviews.com',
+            },
+            {
+                name: 'Programming Tutorials',
+                url: 'https://programmingtutorials.com',
+            },
+        ],
+        rules: [
+            'Be respectful to all members.', //add opt desc to each rule
+            'No spamming or self-promotion.',
+            'Stay on topic and keep discussions relevant.',
+            'No hate speech or personal attacks.',
+            'Use appropriate language and avoid offensive content.',
+        ],
+        moderators: [
+            {
+                id: '1',
+                name: 'Alice Johnson',
+            },
+        ],
+        joined: true,
+    },
+    {
+        id: '2',
+        name: 'Gaming Hub',
+        description: 'Join fellow gamers and discuss your favorite games.',
+        createdAt: '2022-05-15T14:30:00Z',
+        banner_image_url: 'https://loremflickr.com/800/300/gaming',
+        memberCount: 250,
+        type: 'private',
+        rules: [
+            'No cheating or hacking discussions.',
+            'Respect other players and their opinions.',
+            'No spoilers for new games or releases.',
+            'Keep discussions friendly and fun.',
+            'Report any inappropriate behavior to moderators.',
+        ],
+        joined: false,
+    },
+    {
+        id: '3',
+        name: 'Fitness Freaks',
+        description: 'Your go-to community for fitness tips and workouts.',
+        createdAt: '2021-09-20T08:45:00Z',
+        banner_image_url: 'https://loremflickr.com/800/300/fitness',
+        memberCount: 80,
+        type: 'public',
+        resources: [
+            {
+                name: 'Workout Plans',
+                url: 'https://workoutplans.com',
+            },
+            {
+                name: 'Nutrition Guides',
+                url: 'https://nutritionguides.com',
+            },
+            {
+                name: 'Fitness Apps',
+                url: 'https://fitnessapps.com',
+            },
+        ],
+        rules: [
+            'No body shaming or negative comments.',
+            'Share your progress and motivate others.',
+            'Respect personal boundaries and privacy.',
+            'No unsolicited advice or criticism.',
+            'Keep discussions positive and encouraging.',
+        ],
+        joined: true,
+    },
+    {
+        id: '4',
+        name: 'Movie Buffs',
+        description: 'Discuss movies, TV shows, and everything cinema-related.',
+        createdAt: '2020-12-05T18:10:00Z',
+        banner_image_url: 'https://loremflickr.com/800/300/movies',
+        memberCount: 300,
+        type: 'private',
+        resources: [
+            {
+                name: 'Movie Reviews',
+                url: 'https://moviereviews.com',
+            },
+            {
+                name: 'Upcoming Releases',
+                url: 'https://upcomingreleases.com',
+            },
+            {
+                name: 'Film Festivals',
+                url: 'https://filmfestivals.com',
+            },
+        ],
+        rules: [
+            'No spoilers without warning.',
+            'Respect differing opinions on films.',
+            'No piracy discussions or links.',
+            'Keep discussions civil and respectful.',
+            'Avoid excessive negativity towards films or genres.',
+        ],
+        joined: false,
+    },
+    {
+        id: '5',
+        name: 'Coding Wizards',
+        description: 'A place for developers to share knowledge and projects.',
+        createdAt: '2019-07-22T10:15:00Z',
+        banner_image_url: 'https://loremflickr.com/800/300/coding',
+        memberCount: 150,
+        type: 'public',
+        resources: [
+            {
+                name: 'Code Snippets',
+                url: 'https://codesnippets.com',
+            },
+            {
+                name: 'Open Source Projects',
+                url: 'https://opensourceprojects.com',
+            },
+            {
+                name: 'Programming Languages',
+                url: 'https://programminglanguages.com',
+            },
+        ],
+        rules: [
+            'No plagiarism or copying code.',
+            'Help others and share your knowledge.',
+            'Respect all programming languages and frameworks.',
+            'No personal attacks or insults.',
+            'Keep discussions focused on coding and development.',
+        ],
+        joined: true,
+    },
+    {
+        id: '6',
+        name: 'Music Lovers',
+        description: 'Share and discover new music with fellow fans.',
+        createdAt: '2021-03-11T16:50:00Z',
+        banner_image_url: 'https://loremflickr.com/800/300/music',
+        memberCount: 200,
+        type: 'public',
+        resources: [
+            {
+                name: 'Music Charts',
+                url: 'https://musiccharts.com',
+            },
+            {
+                name: 'Concerts & Events',
+                url: 'https://concertsandevents.com',
+            },
+            {
+                name: 'Music Genres',
+                url: 'https://musicgenres.com',
+            },
+        ],
+        rules: [
+            'No hate speech or discrimination.',
+            'Respect all music genres and artists.',
+            'No spamming or self-promotion.',
+            'Share your playlists and recommendations.',
+            'Keep discussions friendly and respectful.',
+        ],
+        joined: false,
+    },
+    {
+        id: '7',
+        name: 'Travel Diaries',
+        description: 'Share your travel experiences and get destination tips.',
+        createdAt: '2020-06-30T09:00:00Z',
+        banner_image_url: 'https://loremflickr.com/800/300/travel',
+        memberCount: 180,
+        type: 'public',
+        joined: true,
+    },
+    {
+        id: '8',
+        name: 'Photography World',
+        description: 'For photographers to share and discuss their best shots.',
+        createdAt: '2018-11-12T21:20:00Z',
+        banner_image_url: 'https://loremflickr.com/800/300/photography',
+        memberCount: 90,
+        type: 'public',
+        joined: false,
+    },
+    {
+        id: '9',
+        name: 'Foodies United',
+        description: 'Talk about recipes, restaurants, and all things food.',
+        createdAt: '2022-08-14T13:40:00Z',
+        banner_image_url: 'https://loremflickr.com/800/300/food',
+        memberCount: 220,
+        type: 'public',
+        joined: true,
+    },
+    {
+        id: '10',
+        name: 'Science & Space',
+        description: 'Explore the universe and scientific discoveries.',
+        createdAt: '2017-04-25T05:30:00Z',
+        banner_image_url: 'https://loremflickr.com/800/300/space',
+        memberCount: 160,
+        type: 'public',
+        joined: false,
+    },
+];
+
+export { communities };
